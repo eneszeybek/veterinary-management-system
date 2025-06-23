@@ -23,4 +23,4 @@ Bu proje, bir veteriner kliniğinin temel operasyonel süreçlerini dijital orta
 ## UML Diagram
 
 
-![UML Diagram]([https://github.com/kullaniciadi/projeadi/blob/main/docs/uml.png?raw=true](https://github.com/eneszeybek/veterinary-management-system/blob/main/uml_diagram.png))
+![UML Diagram]([https://github.com/kullaniciadi/projeadi/blob/main/docs/uml.png?raw=true](https://github.com/eneszeybek/veterinary-management-system/blob/main/uml_diagram.png?raw=true))
