@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "e1507f36-bdf8-4643-94f8-e07ce7b788ec",
+		"_postman_id": "ca9aacf5-56da-45ea-bd5e-fab0173ee473",
 		"name": "VetApp",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "35671263"
@@ -10,7 +10,7 @@
 			"name": "Customer",
 			"item": [
 				{
-					"name": "http://localhost:8080/api/customers",
+					"name": "Create",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -42,7 +42,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/customers",
+					"name": "Create",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -74,7 +74,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/customers",
+					"name": "Create",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -106,7 +106,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/customers",
+					"name": "Create",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -138,7 +138,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/customers",
+					"name": "Create",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -168,6 +168,151 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Ayşe Yıldız\",\r\n  \"phone\": \"05551112239\",\r\n  \"mail\": \"ayse@example.com\",\r\n  \"address\": \"Bostancı\",\r\n  \"city\": \"İstanbul\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/customers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/customers/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByName",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/customers/search?name=yıldız",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "yıldız"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Karma\",\r\n  \"code\": \"VAC-001\",\r\n  \"protectionStartDate\": \"2025-06-01\",\r\n  \"protectionFinishDate\": \"2026-05-31\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/customers/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers",
+								"6"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -175,7 +320,7 @@
 			"name": "Animal",
 			"item": [
 				{
-					"name": "http://localhost:8080/api/animals/1",
+					"name": "Create/customerId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -208,7 +353,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/animals/2",
+					"name": "Create/customerId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -241,7 +386,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/animals/3",
+					"name": "Create/customerId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -274,7 +419,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/animals/4",
+					"name": "Create/customerId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -307,7 +452,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/animals/5",
+					"name": "Create/customerId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -338,6 +483,197 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Haydar\",\r\n  \"species\": \"Kedi\",\r\n  \"breed\": \"Tekir\",\r\n  \"gender\": \"Erkek\",\r\n  \"colour\": \"Beyaz\",\r\n  \"dateOfBirth\": \"2017-06-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/animals/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"animals",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByCustomerId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/animals/by-customer/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"animals",
+								"by-customer",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByName",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/animals/search?name=boncuk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"animals",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "boncuk"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Karma\",\r\n  \"code\": \"VAC-001\",\r\n  \"protectionStartDate\": \"2025-02-01\",\r\n  \"protectionFinishDate\": \"2026-01-31\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/animals/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"animals",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Karma\",\r\n  \"code\": \"VAC-001\",\r\n  \"protectionStartDate\": \"2025-02-01\",\r\n  \"protectionFinishDate\": \"2026-01-31\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/animals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"animals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Karma\",\r\n  \"code\": \"VAC-001\",\r\n  \"protectionStartDate\": \"2025-02-01\",\r\n  \"protectionFinishDate\": \"2026-01-31\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/animals/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"animals",
+								"5"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -345,7 +681,7 @@
 			"name": "Doctor",
 			"item": [
 				{
-					"name": "http://localhost:8080/api/doctors",
+					"name": "Create",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -377,7 +713,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/doctors",
+					"name": "Create",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -409,7 +745,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/doctors",
+					"name": "Create",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -441,7 +777,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/doctors",
+					"name": "Create",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -473,7 +809,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/doctors",
+					"name": "Create",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -503,6 +839,128 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Dr. Ece Kılıç\",\r\n  \"phone\": \"05554443320\",\r\n  \"mail\": \"ece.kilic@example.com\",\r\n  \"address\": \"Erenköy\",\r\n  \"city\": \"İstanbul\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/doctors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"doctors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Karma\",\r\n  \"code\": \"VAC-001\",\r\n  \"protectionStartDate\": \"2025-02-01\",\r\n  \"protectionFinishDate\": \"2026-01-31\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/doctors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"doctors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Karma\",\r\n  \"code\": \"VAC-001\",\r\n  \"protectionStartDate\": \"2025-02-01\",\r\n  \"protectionFinishDate\": \"2026-01-31\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/doctors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"doctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Karma\",\r\n  \"code\": \"VAC-001\",\r\n  \"protectionStartDate\": \"2025-02-01\",\r\n  \"protectionFinishDate\": \"2026-01-31\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/doctors/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"doctors",
+								"5"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -510,7 +968,7 @@
 			"name": "AvailableDate",
 			"item": [
 				{
-					"name": "http://localhost:8080/api/available-dates/1",
+					"name": "Create/doctorId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -543,7 +1001,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/available-dates/2",
+					"name": "Create/doctorId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -576,7 +1034,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/available-dates/3",
+					"name": "Create/doctorId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -609,7 +1067,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/available-dates/4",
+					"name": "Create/doctorId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -642,7 +1100,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/available-dates/5",
+					"name": "Create/doctorId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -673,6 +1131,139 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"availableDate\": \"2025-07-03\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/available-dates/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"available-dates",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByDoctorId",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/available-dates/by-doctor/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"available-dates",
+								"by-doctor",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/available-dates/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"available-dates",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/available-dates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"available-dates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"availableDate\": \"2025-07-03\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/available-dates/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"available-dates",
+								"2"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -680,7 +1271,7 @@
 			"name": "Appointment",
 			"item": [
 				{
-					"name": "http://localhost:8080/api/appointments/1/1",
+					"name": "Create/doctorId/animalId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -714,7 +1305,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/appointments/2/2",
+					"name": "Create/doctorId/animalId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -748,7 +1339,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/appointments/3/3",
+					"name": "Create/doctorId/animalId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -782,7 +1373,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/appointments/4/4",
+					"name": "Create/doctorId/animalId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -816,7 +1407,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/appointments/5/5",
+					"name": "Create/doctorId/animalId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -850,7 +1441,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/appointments/5/7",
+					"name": "Create/doctorId/animalId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -882,6 +1473,190 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"appointmentDate\": \"2025-07-11T10:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/appointments/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"appointments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/appointments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"appointments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/appointments/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"appointments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByAnimalIdAndDateRange",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/appointments/by-animal?animalId=2&start=2025-07-02T00:00:00&end=2025-07-02T23:59:59",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"appointments",
+								"by-animal"
+							],
+							"query": [
+								{
+									"key": "animalId",
+									"value": "2"
+								},
+								{
+									"key": "start",
+									"value": "2025-07-02T00:00:00"
+								},
+								{
+									"key": "end",
+									"value": "2025-07-02T23:59:59"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByDoctorIdAndDateRange",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/appointments/by-doctor?doctorId=3&start=2025-07-03T00:00:00&end=2025-07-03T23:59:59",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"appointments",
+								"by-doctor"
+							],
+							"query": [
+								{
+									"key": "doctorId",
+									"value": "3"
+								},
+								{
+									"key": "start",
+									"value": "2025-07-03T00:00:00"
+								},
+								{
+									"key": "end",
+									"value": "2025-07-03T23:59:59"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"appointmentDate\": \"2025-07-11T10:00:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/appointments/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"appointments",
+								"6"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -889,7 +1664,7 @@
 			"name": "Vaccine",
 			"item": [
 				{
-					"name": "http://localhost:8080/api/vaccines/1",
+					"name": "Create/animalId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -922,7 +1697,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/vaccines/2",
+					"name": "Create/animalId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -955,7 +1730,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/vaccines/3",
+					"name": "Create/animalId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -988,7 +1763,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/vaccines/4",
+					"name": "Create/animalId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -1021,7 +1796,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/vaccines/5",
+					"name": "Create/animalId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -1054,7 +1829,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/vaccines/6",
+					"name": "Create/animalId",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -1087,7 +1862,40 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/vaccines/by-animal/1",
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Karma\",\r\n  \"code\": \"VAC-001\",\r\n  \"protectionStartDate\": \"2025-06-01\",\r\n  \"protectionFinishDate\": \"2026-05-31\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/vaccines/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vaccines",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByAnimalId",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1124,39 +1932,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/vaccines/by-animal/5",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/vaccines/by-animal/5",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"vaccines",
-								"by-animal",
-								"5"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:8080/api/vaccines/protection-range?start=2025-12-01&end=2026-01-15",
+					"name": "getByProtectionFinishBetween",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -1184,6 +1960,95 @@
 									"key": "end",
 									"value": "2026-01-15"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Karma\",\r\n  \"code\": \"VAC-001\",\r\n  \"protectionStartDate\": \"2025-02-01\",\r\n  \"protectionFinishDate\": \"2026-01-31\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/vaccines/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vaccines",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/vaccines",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vaccines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Karma\",\r\n  \"code\": \"VAC-001\",\r\n  \"protectionStartDate\": \"2025-06-01\",\r\n  \"protectionFinishDate\": \"2026-05-31\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/vaccines/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vaccines",
+								"7"
 							]
 						}
 					},
