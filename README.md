@@ -25,7 +25,7 @@ Bu proje, veteriner kliniklerinde müşteri, hayvan, veteriner hekimi, randevu v
 ## 📮 API Kullanımı
 
 Tüm endpoint'ler `http://localhost:8080/api` altında sunulmaktadır.  
-👉 [Postman koleksiyonu](https://github.com/eneszeybek/veterinary-management-system/blob/main/eneszeybek_vetapp_postman_collection.json)dosyasını kullanarak test edebilirsiniz.
+👉 [Postman koleksiyonu](https://github.com/eneszeybek/veterinary-management-system/blob/main/eneszeybek_vetapp_postman_collection.json) dosyasını kullanarak test edebilirsiniz.
 
 ### Örnek Endpoint'ler
 
