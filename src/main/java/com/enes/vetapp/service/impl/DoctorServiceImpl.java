@@ -27,11 +27,17 @@ public class DoctorServiceImpl implements DoctorService {
     }
 
     @Override
-    public Doctor update(Long id, Doctor doctor) {
+    public Doctor update(Long id, Doctor updatedDoctor) {
         Doctor existing = doctorRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException(id + " id’li kayıt sistemde bulunamadı."));
-        doctor.setId(id);
-        return doctorRepository.save(doctor);
+                .orElseThrow(() -> new ResourceNotFoundException("Doctor not found with id " + id));
+
+        existing.setName(updatedDoctor.getName());
+        existing.setPhone(updatedDoctor.getPhone());
+        existing.setMail(updatedDoctor.getMail());
+        existing.setAddress(updatedDoctor.getAddress());
+        existing.setCity(updatedDoctor.getCity());
+
+        return doctorRepository.save(existing);
     }
 
     @Override

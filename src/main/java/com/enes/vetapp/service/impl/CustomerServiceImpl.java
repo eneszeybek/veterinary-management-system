@@ -30,7 +30,9 @@ public class CustomerServiceImpl implements CustomerService {
     public Customer update(Long id, Customer customer) {
         Customer existing = customerRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException(id + " id’li kayıt sistemde bulunamadı."));
+
         customer.setId(id);
+        customer.setAnimals(existing.getAnimals());
         return customerRepository.save(customer);
     }
 

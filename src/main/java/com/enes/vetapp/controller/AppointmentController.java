@@ -2,6 +2,7 @@ package com.enes.vetapp.controller;
 
 import com.enes.vetapp.entity.Appointment;
 import com.enes.vetapp.service.AppointmentService;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -45,16 +46,18 @@ public class AppointmentController {
     }
 
     @GetMapping("/by-doctor")
-    public ResponseEntity<List<Appointment>> getByDoctorAndDateRange(@RequestParam Long doctorId,
-                                                                     @RequestParam LocalDateTime start,
-                                                                     @RequestParam LocalDateTime end) {
+    public ResponseEntity<List<Appointment>> getByDoctorAndDateRange(
+            @RequestParam Long doctorId,
+            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime start,
+            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime end) {
         return ResponseEntity.ok(appointmentService.getByDoctorIdAndDateRange(doctorId, start, end));
     }
 
     @GetMapping("/by-animal")
-    public ResponseEntity<List<Appointment>> getByAnimalAndDateRange(@RequestParam Long animalId,
-                                                                     @RequestParam LocalDateTime start,
-                                                                     @RequestParam LocalDateTime end) {
+    public ResponseEntity<List<Appointment>> getByAnimalAndDateRange(
+            @RequestParam Long animalId,
+            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime start,
+            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime end) {
         return ResponseEntity.ok(appointmentService.getByAnimalIdAndDateRange(animalId, start, end));
     }
 }

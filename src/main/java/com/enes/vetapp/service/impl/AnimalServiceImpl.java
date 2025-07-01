@@ -35,6 +35,8 @@ public class AnimalServiceImpl implements AnimalService {
                 .orElseThrow(() -> new ResourceNotFoundException("Animal not found"));
         animal.setId(id);
         animal.setCustomer(existing.getCustomer());
+        animal.setAppointments(existing.getAppointments());
+        animal.setVaccines(existing.getVaccines());
         return animalRepository.save(animal);
     }
 
